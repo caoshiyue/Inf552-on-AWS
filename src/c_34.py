@@ -1,4 +1,4 @@
-import pandas as pd
+
 import numpy as np
 import os
 from keras.utils import np_utils
@@ -8,7 +8,7 @@ from keras.models import Sequential
 from keras.callbacks import ModelCheckpoint, Callback
 from keras.layers import Conv2D, MaxPooling2D, Flatten, Dropout, Activation
 
-char_set = set(open('./src/corpus').read().lower())
+char_set = set(open('./corpus').read().lower())
 char_set = sorted(list(char_set))
 char_2_float = dict()
 char_2_int = dict()
@@ -27,7 +27,7 @@ for c in char_2_float:
     i += 1
 
 
-chars = open('./src/corpus').read().lower()
+chars = open('./corpus').read().lower()
 total_chars = len(chars)
 
 W = 99
